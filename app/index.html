@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="media/css/style.css"/>
+    <link rel="stylesheet" href="media/js/codemirror/codemirror.css"/>
+    <link rel="stylesheet" href="media/js/codemirror/addons/hint/show-hint.css"/>
+    <link rel="stylesheet" href="media/js/codemirror/themes/base16-light.css"/>
+    <title>Markdownify</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <nav class="tools-panel">
+            <button
+                class="fab-button transparent symbol"
+                v-for="(tool, index) in tools"
+                :key="index"
+                @click="applyTool(tool.name)"
+                v-html="tool.symbol"
+            ></button>
+        </nav>
+
+        <textarea id="editor" autofocus></textarea>
+
+        <div v-html="compiled_code" class="preview"></div>
+
+    </div>
+
+    <script>
+        require("./render.js");
+        require("./media/js/main.js")
+    </script>
+
+</body>
+</html>

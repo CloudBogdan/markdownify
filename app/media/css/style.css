@@ -1,0 +1,264 @@
+@font-face {
+  src: url(./fonts/Nunito-Regular.ttf);
+  font-family: Nunito;
+}
+
+@font-face {
+  src: url(./fonts/PlayfairDisplay-Regular.ttf), url(./fonts/PlayfairDisplay-Italic.ttf), url(./fonts/PlayfairDisplay-ExtraBold.ttf);
+  font-family: Playf;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  position: relative;
+  margin: 0;
+  top: 0;
+}
+
+body, html, #app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+button {
+  background: rgba(0, 0, 0, 0.05);
+  color: #aaa;
+}
+
+button:active {
+  background: rgba(81, 167, 105, 0.2);
+  color: #51A769;
+  -webkit-box-shadow: 0 0 0 5px rgba(81, 167, 105, 0.2);
+          box-shadow: 0 0 0 5px rgba(81, 167, 105, 0.2);
+}
+
+button:hover {
+  color: #51A769;
+}
+
+button.fab-button {
+  border-radius: 44% 56% 62% 38% / 36% 55% 45% 64%;
+  -webkit-animation: liquid 3s infinite ease-in-out;
+          animation: liquid 3s infinite ease-in-out;
+}
+
+@-webkit-keyframes liquid {
+  0%, 100% {
+    border-radius: 44% 56% 62% 38% / 36% 55% 45% 64%;
+  }
+  20% {
+    border-radius: 50% 50% 62% 38% / 50% 37% 63% 50%;
+  }
+  40% {
+    border-radius: 36% 64% 40% 60% / 50% 37% 63% 50%;
+  }
+  60% {
+    border-radius: 47% 53% 57% 43% / 62% 37% 63% 38%;
+  }
+  80% {
+    border-radius: 63% 37% 57% 43% / 37% 62% 38% 63%;
+  }
+}
+
+@keyframes liquid {
+  0%, 100% {
+    border-radius: 44% 56% 62% 38% / 36% 55% 45% 64%;
+  }
+  20% {
+    border-radius: 50% 50% 62% 38% / 50% 37% 63% 50%;
+  }
+  40% {
+    border-radius: 36% 64% 40% 60% / 50% 37% 63% 50%;
+  }
+  60% {
+    border-radius: 47% 53% 57% 43% / 62% 37% 63% 38%;
+  }
+  80% {
+    border-radius: 63% 37% 57% 43% / 37% 62% 38% 63%;
+  }
+}
+
+body, button {
+  font-size: 16px;
+  font-family: Nunito;
+  color: #303030;
+  font-weight: 400;
+}
+
+body {
+  background: #fff;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 6px;
+  border: 3px solid #fff;
+}
+
+.tools-panel {
+  width: 70px;
+  height: 100vh;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.preview {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+}
+
+.preview hr {
+  width: 100%;
+  height: 1px;
+  margin: 10px auto;
+  border: none;
+  background: #ccc;
+}
+
+.preview img {
+  width: 45%;
+  display: inline-block;
+  margin: 5px;
+}
+
+.preview .code {
+  background: #f0f0f0;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-family: "Courier New";
+}
+
+.preview .blockquote {
+  padding: 15px 20px;
+  border-left: 4px solid #51A769;
+  background: #fafafa;
+}
+
+.preview p {
+  margin-bottom: 5px;
+}
+
+.preview h1, .preview .code, .preview .blockquote, .preview ol, .preview dl, .preview ul {
+  margin-bottom: 15px;
+}
+
+.preview h2, .preview h3, .preview h4, .preview h5, .preview h6 {
+  margin: 15px 0;
+}
+
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+button.fab-button {
+  width: 50px;
+  height: 50px;
+}
+
+button:not(:active).transparent {
+  background: transparent;
+}
+
+.CodeMirror {
+  width: 50% !important;
+  height: 100vh !important;
+  font-family: Consolas !important;
+  background: #fff !important;
+  border-right: 1px solid #ccc;
+}
+
+.CodeMirror .CodeMirror-code {
+  padding-bottom: 200px;
+}
+
+.CodeMirror .CodeMirror-scroll {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.CodeMirror .CodeMirror-gutter {
+  background: #fff;
+}
+
+.CodeMirror .CodeMirror-linenumber {
+  padding-right: 5px;
+}
+
+.CodeMirror .cm-header {
+  color: #51A769 !important;
+}
+
+.CodeMirror .cm-header.cm-header-1 {
+  font-size: 36px !important;
+}
+
+.CodeMirror .cm-header.cm-header-2 {
+  font-size: 30px !important;
+}
+
+.CodeMirror .cm-header.cm-header-3 {
+  font-size: 24px !important;
+}
+
+.CodeMirror .cm-header.cm-header-4 {
+  font-size: 18px !important;
+}
+
+.CodeMirror .cm-list-item {
+  color: #51A769 !important;
+}
+
+.CodeMirror .cm-link {
+  color: #6841f3 !important;
+}
+
+.CodeMirror .cm-quote {
+  color: #51A769 !important;
+}
+
+.symbol {
+  font-family: Playf;
+}
+/*# sourceMappingURL=style.css.map */
