@@ -9,4 +9,5 @@ $ npm i
 $ npm start
 ```
 
-### Preiew:
+### Preview:
+![preview](https://user-images.githubusercontent.com/60233692/92944695-fd2d6280-f45c-11ea-94e1-c26ad046e1c7.png)
